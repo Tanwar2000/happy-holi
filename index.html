@@ -52,17 +52,26 @@
 
         #demo {
             position: absolute;
-            background-color: #d61616;
+            /* background-color: #d61616; */
+            border: 1px solid black;
             height: 100px;
             width: 100px;
             z-index: 1000;
         }
         .developed-by{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             position: absolute;
             bottom: 0px;
-            color: peachpuff;
-            min-height: 60px;
-            text-align: center;
+            background-color: peachpuff;
+            min-height: 50px;
+            width: 100%;
+            color: black;
+            font-size: larger;
+            font-weight: 500;
+            font-family: 'Times New Roman', Times, serif;
         }
     </style>
 </head>
@@ -81,11 +90,12 @@
         
     </div>
 
-    <div class="developed-by"></div>
+    <div class="developed-by"><center>&copy;Developed by Chirag Gupta and Vikrant Tanwar.</center></div>
+    
     <script>
-        // window.onload = function () {
+        // $(window).onload(function(){
         //     $('#demo').hide();
-        // }
+        // });
         $(window).click(function (event) {
             createAndShowSpalshes(event.clientX, event.clientY);
         });
@@ -110,7 +120,6 @@
             var l = rand(30, 70); // lightness 30-70%
             return 'hsl(' + h + ',' + s + '%,' + l + '%)';
         }
-
     </script>
 </body>
 
